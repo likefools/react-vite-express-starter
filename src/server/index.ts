@@ -5,7 +5,7 @@ import { JsonDataProvider } from 'remult';
 import { JsonEntityFileStorage } from 'remult/server';
 
 const app = express();
-app.use(api);
+// app.use(api);
 
 app.use(remultExpress({
     dataProvider: async () => new JsonDataProvider(new JsonEntityFileStorage('./db'))
