@@ -1,8 +1,11 @@
 import express from 'express';
 import { remultExpress } from 'remult/remult-express';
 import { api } from './api';
-import { JsonDataProvider } from 'remult';
+import { JsonDataProvider, Remult } from "remult";
 import { JsonEntityFileStorage } from 'remult/server';
+
+export const remultLocalStorage = new Remult(new JsonDataProvider(localStorage))
+
 
 const app = express();
 // app.use(api);
